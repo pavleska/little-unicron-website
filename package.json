@@ -1,0 +1,22 @@
+{
+  "name": "little-unicron-website",
+  "version": "1.0.0",
+  "description": "Personal website for one little unicorn",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavleska/little-unicron-website.git"
+  },
+  "author": "Frosina Pavleska",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pavleska/little-unicron-website/issues"
+  },
+  "homepage": "https://github.com/pavleska/little-unicron-website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
