@@ -10,6 +10,7 @@
       <meta name="author" content="FoFi">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href='https://fonts.googleapis.com/css?family=Gochi Hand' rel='stylesheet'>
+      <script src="https://kit.fontawesome.com/751cfb7e8d.js" crossorigin="anonymous"></script>
   </head>
       <body>
       <header>
@@ -25,22 +26,23 @@
        </header>
        
      <section>
-           
-      <nav>
-       <ul>
-       <li><a href="home.html">Home</a></li>
-       <li><a href="Stories">Stories</a></li>
-       <li><a href="contact">Characters</a></li>
-       <li><a href="about">About</a></li>
-       </ul>
-        <hr>
-      </nav>
+       <div class="sticky">
+         <nav>
+           <ul>
+           <li><a href="home.html"> <i class="	fas fa-home" style="font-size:24px; text-align: end;"> <br> </i>Home</a></li>
+           <li><a href="Stories">Stories</a></li>
+           <li><a href="contact">Characters</a></li>
+           <li><a href="about">About</a></li>
+           </ul>
+           <hr>
+         </nav>
+       </div>     
               
       <article>
          <h2>The beginnig</h2> <br>
          <p>Once upon a time <br>
             in a small village...<br>
-          <button onclick="myFunction()">Read more..</button>
+          <button onclick="myFunction()">Read more..</button> <br>
          </p>
          <p id="demo"></p>
          <script>

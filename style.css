@@ -110,7 +110,12 @@ section:after {
     color:rgb(149, 150, 151, 0.808);
     font-size: 30mm;
     position: absolute;
-    
     top: 0;
-    right: 0;
+    right: 300px;
+    z-index: +1;
+}
+.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
