@@ -32,7 +32,7 @@ nav {
     margin-right: auto;
 }
 
-ul {
+nav ul {
     border: 2px solid rgba(149, 150, 151, 0);
     list-style-type: none;
     margin: 0;
@@ -41,22 +41,31 @@ ul {
     background-color: rgba(48, 67, 121);
 }
 
-li {
+nav li {
     float: left;
 }
 
-li a {
+nav li a {
     display:inline-block;
     color: rgba(255, 255, 255, 0.808);
     text-align: center;
     padding: 16px;
     font-size: 4.5mm;
     font-weight: 600;
+    border: 2px solid rgba(251, 253, 255, 0)
 }
 
-li a:hover {
+nav li a:hover {
     background-color:rgba(40, 58, 107, 0.76);
     border: 2px solid rgba(251, 253, 255, 0.808)
+}
+
+nav li > a > i {
+    display: block;
+}
+
+nav li > a > span {
+    display: block;
 }
 
 a:link, a:hover, a:visited, a:active {
@@ -114,8 +123,9 @@ section:after {
     right: 300px;
     z-index: +1;
 }
-.sticky{
+.sticky {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
+

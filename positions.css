@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+}
+
+header > * {
+    height: 300px;
+    width: 100%;
+}
+
+.menu {
+    background: rgba(240,110, 240, 0.5);
+    position: relative;
+}
+
+.content {
+    background: red;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    height: 50px;
+    z-index: +1;
+}
+
+.bottom-content {
+    background:rgba(0,250, 240, 0.5);
+    position: relative;
+}
+
+section {
+
+}
+
+section > .item {
+    display: inline-block;
+    width: 20%;
+    height: 150px;
+    position: relative;
+    margin: 5px;
+}
+
+section > .item > .image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+section > .item > .image > img {
+    width: 100%;
+    height: 100%;
+}
+
+section > .item > .title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+}
+
+section > .item > i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    color: yellow;
+}
+
+section > .item:hover > .title {
+    background: rgba(0, 0, 0, .8);
+    cursor: pointer;
+}
+
+section > .item:hover {
+    cursor: pointer;
+}
