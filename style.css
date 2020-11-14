@@ -19,13 +19,15 @@ img {
 header {
     -webkit-text-stroke-width: 0.05mm;
     -webkit-text-stroke-color: rgb(238, 240, 240);
-    color: rgba(222, 205, 241, 0.521);
+    color:#7986cb;
     font-size: 12mm;
     font-style: oblique;
     font-family: 'Gochi Hand';
     text-align: center;
     font-variant: small-caps;
+    text-shadow: 1px 1px 3px rgb(238, 240, 240);
 }
+
 nav {
     max-width: 1280px;
     margin-left: auto; 
@@ -51,13 +53,11 @@ nav li a {
     padding: 16px;
     font-size: 4.5mm;
     font-weight: 600;
-    border: 2px solid rgba(251, 253, 255, 0)
 }
 
 nav li a:hover {
-    background-colo:#7986cb;
-    border: 2px solid rgba(251, 253, 255, 0.808);
-    border-radius: 5px;
+    font-size: x-large;
+    text-shadow: 2px 2px 5px #aab6fe;;
 }
 
 nav li > a > i {
@@ -79,19 +79,30 @@ article {
     margin-top: -2ch;
     }
  article > h2{
-    -webkit-text-stroke-width: 0.1mm;
+    -webkit-text-stroke-width: 0.2mm;
     -webkit-text-stroke-color: rgb(253, 255, 255);
     font-style: italic;
     font-size:10mm; 
-    color:rgba(255, 255, 255, 0.521);
+    color: #aab6fe;
     font-variant: small-caps;
     font-family:'Comic Sans MS', cursive, sans-serif;
     }
- article > p{border: 2px solid rgba(149, 150, 151, 0.808);
+ article > p {
+     border: 2px solid rgba(149, 150, 151, 0.808);
      padding: 30px;
      margin-right: 50px;
      border-radius: 5px;
      margin-top: -2ch;
+     text-indent: 20px;
+    }
+    p::first-letter {
+        color: #aab6fe;
+        font-size: xx-large;
+        font-family: 'Bonbon';
+        font-weight: bold;
+        text-shadow: 1.5px 1.5px 3px #7986cb
+
+        ;
     }
 aside {
     margin-top: 13ch;
@@ -126,6 +137,7 @@ section:after {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    height: 25mm;
 }
 .unicorn-heart2 {
     display: block;
@@ -135,3 +147,6 @@ section:after {
     top: 0;
     left: 300px;
 }
+h2::before {
+    content: url(./public/imgs/h1.png);
+  }
