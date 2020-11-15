@@ -3,7 +3,7 @@
   <head>
     <div class="page-wraper">
       <link rel="stylesheet" href="style.css">
-      <title>Little Unicorn (Entertainmentt fos kids)</title>
+      <title>Little Unicorn (Entertainment for kids)</title>
       <meta charset="UTF-8"/>
       <meta name="description" content="Entertainmentt fos kids">
       <meta name="keywords" content="unicorns">
@@ -11,11 +11,12 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link href='https://fonts.googleapis.com/css?family=Gochi Hand' rel='stylesheet'>
       <link href='https://fonts.googleapis.com/css?family=Bonbon' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet'>
       <script src="https://kit.fontawesome.com/751cfb7e8d.js" crossorigin="anonymous"></script>
   </head>
       <body>
       <header>
-       <div class="header">
+      <div class="header">
           <h1>Little Unicorn</h1>
        <div>
        <div  class="unicorn-heart">
@@ -37,38 +38,82 @@
            <ul>
            <li>
              <a href="home.html">
-               <i class="fas fa-home" style="font-size:24px; text-align: end;"></i>
+               <i class="fas fa-home"></i>
                <span>Home</span>
               </a>
             </li>
-           <li>
-             <a href="Stories">
-               <i class="fas fa-book-open" style="font-size:24px; text-align: end;"></i>
-               <span>Stories</span>
-             </a>
-           </li>
+            <li class="dropdown">
+              <a href="Stories"class="dropbtn">
+                <i class="fas fa-book-open"></i>
+                <span>Stories</span>
+              </a>
+              <div class="dropdown-content">
+                <a href="#">Story 1</a>
+                <a href="#">Story 2</a>
+                <a href="#">Story 3</a>
+               </div>
+            </li>
            <li>
              <a href="Characters">
-               <i class="fas fa-horse" style="font-size:24px; text-align: end;"></i>
+               <i class="fas fa-horse"></i>
                <span>Characters</span>
              </a>  
            </li>
-           <li>
+           <li style="float:right">
              <a href="about">
-               <i class="fa fa-pencil-square-o	" style="font-size:24px; text-align: end;"></i>
+               <i class="fa fa-pencil-square-o"></i>
                <span>About</span> 
              </a>
            </li>
            </ul>
            <hr>
          </nav>
-       </div>     
-              
+       </div>
+         <aside>
+           <ul>
+             <li><a class="active" href="#Chapter 1 - The Beginning">Chapter 1- The Beginning</a></li>
+             <li><a href="#Chapter 2">Chapter 2</a></li>
+             <li><a href="#Chapter 3">Chapter 3</a></li>
+             <li><a href="#Chapter 4">Chapter 4</a></li>
+             <li><a href="#Chapter 5">Chapter 5</a></li>
+             <li><a href="#Chapter 6">Chapter 6</a></li>
+             <li><a href="#Chapter 7">Chapter 7</a></li>
+             <li><a href="#Chapter 8">Chapter 8</a></li>
+             <li><a href="#Chapter 9">Chapter 9</a></li>
+             <li><a href="#Chapter 10">Chapter 10</a></li>
+             <li><a href="#Chapter 11">Chapter 11</a></li>
+             <li><a href="#Chapter 12">Chapter 12</a></li>
+             <li><a href="#Chapter 13">Chapter 13</a></li>
+             <li><a href="#Chapter 2">Chapter 2</a></li>
+             <li><a href="#Chapter 3">Chapter 3</a></li>
+             <li><a href="#Chapter 4">Chapter 4</a></li>
+             <li><a href="#Chapter 5">Chapter 5</a></li>
+             <li><a href="#Chapter 6">Chapter 6</a></li>
+             <li><a href="#Chapter 7">Chapter 7</a></li>
+             <li><a href="#Chapter 8">Chapter 8</a></li>
+             <li><a href="#Chapter 9">Chapter 9</a></li>
+             <li><a href="#Chapter 10">Chapter 10</a></li>
+             <li><a href="#Chapter 11">Chapter 11</a></li>
+             <li><a href="#Chapter 12">Chapter 12</a></li>
+             <li><a href="#Chapter 13">Chapter 13</a></li> 
+             <li><a href="#Chapter 3">Chapter 3</a></li>
+             <li><a href="#Chapter 4">Chapter 4</a></li>
+             <li><a href="#Chapter 5">Chapter 5</a></li>
+             <li><a href="#Chapter 6">Chapter 6</a></li>
+             <li><a href="#Chapter 7">Chapter 7</a></li>
+             <li><a href="#Chapter 8">Chapter 8</a></li>
+             <li><a href="#Chapter 9">Chapter 9</a></li>
+             <li><a href="#Chapter 10">Chapter 10</a></li>
+             <li><a href="#Chapter 11">Chapter 11</a></li>
+             <li><a href="#Chapter 12">Chapter 12</a></li>
+             <li><a href="#Chapter 13">Chapter 13</a></li>
+           </ul>
+         </aside>        
       <article>
-         <h2>The beginnig</h2> <br>
+          <h2 id="Chapter 1 - The Beginning">The beginnig</h2>
          <p>Once upon a time <br>
             in a small village...<br><br>
-          <button onclick="myFunction()">Read more..</button> <br>
+           <button onclick="myFunction()">Read more..</button> <br>
          </p>
          <p id="demo"></p>
          <script>
@@ -76,19 +121,8 @@
            document.getElementById("demo").innerHTML = "and sooo on";
            }
          </script>
-      </article>
-           
-      <aside>
-         <picture>
-           <source srcset="./public/imgs/little_unicorn.jpg" media="(max-width: 600px)">
-           <source srcset="./public/imgs/grownup_unicorn.jpeg" media="(max-width: 1500px)">
-           <source srcset="./public/imgs/grownup_unicorn.jpeg">
-           <img class="unicorn-img" title="unicorn"src="./public/imgs/grownup_unicorn.png" alt="Unicorn" ><br>
-         </picture>
-                 
-         <iframe src="home.html" height="200" width="300" style="border:none;" title="Iframe" style="float: inline-end"></iframe>
-      </aside>
-      
+         <h2 id="Chapter 2">The beginnig</h2>
+      </article>      
       </section>
 
       </div>

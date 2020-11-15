@@ -1,6 +1,7 @@
 html, body {
     margin: 0;
     background-color:#49599a;
+    font-family: "Oswald";
 }
 * {
     box-sizing: border-box;
@@ -46,6 +47,14 @@ nav li {
     float: left;
 }
 
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
 nav li a {
     display:inline-block;
     color: rgba(255, 255, 255, 0.808);
@@ -57,10 +66,15 @@ nav li a {
 
 nav li a:hover {
     font-size: x-large;
-    text-shadow: 2px 2px 5px #aab6fe;;
+    text-shadow: 2px 2px 5px #aab6fe;
 }
-
+nav li a:hover>i{
+    font-size: 32px;
+}
+    
 nav li > a > i {
+    font-size:24px; 
+    text-align: end;
     display: block;
 }
 
@@ -68,12 +82,89 @@ nav li > a > span {
     display: block;
 }
 
-a:link, a:hover, a:visited, a:active {
+nav a:link, a:hover, a:visited, a:active {
     text-decoration: none;
 }
-article {
-    width: 60%;
+nav a.active {
+    background-color: #aab6fe;
+    color: white;
+}
+li.dropdown {
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #aab6fe;
+    color:white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {background-color: #f1f1f1;}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+aside {
+    margin-top: 0;
+    width: 20%;
     float: left;
+    overflow: auto;
+    padding:0 10px;
+    height: calc(100% - 90px);
+    top:90px;
+}
+aside ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #7986cb;
+    height: 100%;
+    overflow: auto;
+}
+
+aside li a {
+    display: block;
+    color: rgb(248, 248, 248);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+  
+aside li a.active {
+    background-color:#49599a;
+    color: white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    border-radius: 5px;
+}
+  
+aside li a:hover:not(.active) {
+    background-color: #49599a;
+    color: white;
+    color: white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+    border-radius: 5px;
+    border-radius: 5px;
+  }
+article {
+    width: 80%;
+    float: right;
     color:rgb(255, 255, 255);
     font-size:4mm;
     margin-top: -2ch;
@@ -104,11 +195,6 @@ article {
 
         ;
     }
-aside {
-    margin-top: 13ch;
-    width: 40%;
-    float: right;
-}
 section:after {
     content: "";
     display: table;
@@ -148,5 +234,5 @@ section:after {
     left: 300px;
 }
 h2::before {
-    content: url(./public/imgs/h1.png);
-  }
+    content: url(./public/imgs/h1.png)
+}
