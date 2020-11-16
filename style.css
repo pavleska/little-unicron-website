@@ -206,7 +206,7 @@ section:after {
       position: relative;
     }
 @media (max-width: 600px) {
-    nav, article, aside {
+    nav, aside, article {
       width: 100%;
       height: auto;
     }
