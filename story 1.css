@@ -34,7 +34,13 @@ header > .title-and-images > .image-right {
 }
 header  > .title-and-images > .title{
     flex-grow: 2;
+    background-image: url("./public/imgs/book.png"), url("./public/imgs/book - copy.png");
+    background-repeat: no-repeat;
+    background-position: bottom right, bottom left;
+    background-size: 350px;
+    margin-bottom: 4px;
 }
+
 header  > .title-and-images > .title > p {
     font-family: 'Gochi Hand';
     color:#7986cc;
