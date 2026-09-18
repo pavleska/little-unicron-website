@@ -1,10 +1,12 @@
 {
   "name": "little-unicron-website",
   "version": "1.0.0",
-  "description": "Personal website for one little unicorn",
-  "main": "index.html",
+  "description": "Мало Еднорогче — приказни за еднорози и бајки за деца, на македонски",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && node server.js",
+    "serve": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,19 @@
   },
   "homepage": "https://github.com/pavleska/little-unicron-website#readme",
   "dependencies": {
+    "@toolcase/base": "^5.0.0",
+    "@toolcase/web-components": "^6.1.0",
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "keywords": [
+    "kids",
+    "stories",
+    "unicorns",
+    "fairy-tales",
+    "macedonian",
+    "web-components"
+  ]
 }

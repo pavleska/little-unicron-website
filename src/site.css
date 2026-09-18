@@ -1,0 +1,231 @@
+/* ============================================================
+   Мало Еднорогче — стилови врз темата „sunshine / rose“.
+   Компонентите (tc-*) ги стилизира @toolcase/web-components/style.css;
+   овде има само фонтови, токени и распоред на самите страници.
+   Правило од библиотеката: без border-radius — темата смета дека го нема.
+   ============================================================ */
+
+:root {
+  --me-display: 'Comfortaa', 'Nunito', system-ui, sans-serif;
+  --me-body: 'Nunito', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --me-accent: #c2417a;
+  --me-soft: linear-gradient(rgba(255, 255, 255, 0.84), rgba(255, 255, 255, 0.84));
+}
+
+tc-theme[name='sunshine'] {
+  --tc-font-sans: var(--me-body);
+  --tc-font-display: var(--me-display);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--me-body);
+  background: var(--tc-canvas, #fff9f2);
+  color: var(--tc-text, #2b2520);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Скок до секција зад лепливата навигација */
+section[id],
+article[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+/* --- Навигација ----------------------------------------------------------- */
+.me-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+.me-brand img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* --- Херој ---------------------------------------------------------------- */
+tc-hero {
+  --bs-hero-title-font-family: var(--me-display);
+  --bs-hero-padding-y: 3.5rem;
+}
+
+/* --- Секции --------------------------------------------------------------- */
+.me-section {
+  padding: 3rem 0 3.5rem;
+}
+.me-section--alt {
+  background: var(--tc-surface-muted, #fdf3e7);
+  border-top: 1px solid var(--tc-border, #eadfce);
+  border-bottom: 1px solid var(--tc-border, #eadfce);
+}
+.me-section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.me-section-head--art {
+  align-items: center;
+}
+.me-section-art {
+  width: min(280px, 46vw);
+  height: auto;
+  display: block;
+}
+
+/* --- Картички на приказни ------------------------------------------------- */
+tc-grid > tc-taxonomy-card {
+  height: 100%;
+}
+.me-card-media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 92px;
+  color: var(--me-accent);
+  background: var(--me-soft), var(--me-accent);
+  border-bottom: 1px solid var(--tc-border, #eadfce);
+}
+
+/* --- Страница со приказна ------------------------------------------------- */
+.me-reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: calc(var(--tc-z-sticky, 1020) + 1);
+  --bs-progress-height: 4px;
+  pointer-events: none;
+}
+.me-reading-progress .progress {
+  height: 4px;
+  background: transparent;
+}
+.me-story {
+  padding-top: 2rem;
+}
+.me-story-head {
+  display: grid;
+  gap: 0.85rem;
+  margin: 1.5rem 0 1rem;
+}
+.me-story-icon {
+  display: inline-flex;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--me-accent);
+  background: var(--me-soft), var(--me-accent);
+  border: 1px solid var(--tc-border, #eadfce);
+}
+.me-story-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.me-story-head tc-heading,
+.me-story-head tc-heading h1 {
+  font-family: var(--me-display);
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  line-height: 1.15;
+  margin: 0;
+}
+.story-body {
+  max-width: 66ch;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  line-height: 1.85;
+}
+.story-body p {
+  margin: 0 0 1.25em;
+}
+.story-body h2 {
+  font-family: var(--me-display);
+  font-size: 1.4rem;
+  margin: 2em 0 0.75em;
+}
+.story-body > p:first-child::first-letter {
+  float: left;
+  font-family: var(--me-display);
+  font-size: 3.4em;
+  line-height: 0.85;
+  padding: 0.05em 0.12em 0 0;
+  color: var(--me-accent);
+}
+.me-story tc-callout-quote {
+  display: block;
+  max-width: 66ch;
+  margin: 0 auto 2.5rem;
+  --bs-callout-quote-border-color: var(--me-accent);
+  --bs-callout-quote-mark-color: var(--me-accent);
+  --bs-callout-quote-text-size: 1.2rem;
+}
+.me-story-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0 3rem;
+}
+.me-story-nav tc-button {
+  flex: 1 1 14rem;
+  display: flex;
+}
+.me-story-nav tc-button > * {
+  width: 100%;
+}
+
+/* Поголеми букви — копчето „Аа“ во навигацијата */
+.golemi-bukvi .story-body {
+  font-size: 1.5rem;
+  line-height: 1.95;
+}
+.golemi-bukvi .me-story tc-callout-quote {
+  --bs-callout-quote-text-size: 1.45rem;
+}
+.golemi-bukvi .me-prose {
+  font-size: 1.35rem;
+}
+
+/* --- За нас и 404 --------------------------------------------------------- */
+.me-prose {
+  max-width: 66ch;
+  margin: 2rem auto 3rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+.me-prose h2 {
+  font-family: var(--me-display);
+  font-size: 1.5rem;
+  margin: 2rem 0 0.75rem;
+}
+.me-prose ul {
+  padding-left: 1.25rem;
+}
+.me-prose code {
+  font-family: var(--tc-font-mono, monospace);
+  font-size: 0.9em;
+  background: var(--tc-surface-muted, #fdf3e7);
+  padding: 0.1em 0.35em;
+}
+.me-404 {
+  padding: 4rem 0;
+  display: grid;
+  justify-items: center;
+  gap: 1.5rem;
+}
