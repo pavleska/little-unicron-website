@@ -4,6 +4,9 @@
 //   npm run build      →  dist/index.html, dist/za-nas.html, dist/prikazni/<slug>.html,
 //                          dist/assets/app.{js,css}, dist/imgs/*
 //
+// Излезната папка може да се смени со аргумент или OUT_DIR:
+//   node scripts/build.mjs output   или   OUT_DIR=output npm run build
+//
 // Секоја приказна е Markdown датотека со frontmatter (види README.md).
 import { readFile, writeFile, mkdir, readdir, copyFile, rm } from 'node:fs/promises'
 import path from 'node:path'
@@ -12,7 +15,8 @@ import { build as bundle } from 'esbuild'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const CONTENT = path.join(ROOT, 'content', 'prikazni')
-const DIST = path.join(ROOT, 'dist')
+const OUT = process.argv[2] || process.env.OUT_DIR || 'dist'
+const DIST = path.resolve(ROOT, OUT)
 const IMAGES = ['unicorn_on_clouds.png', 'books_unicorn_left.png', 'main_unicorn.png', 'little_unicorn.jpg']
 
 const SITE = {
@@ -485,7 +489,7 @@ async function main() {
 
   const words = stories.reduce((n, s) => n + s.words, 0)
   console.log(
-    `✔ ${stories.length} приказни (${words} зборови), ${stories.length + 3} страници → dist/ за ${Date.now() - t0} ms`,
+    `✔ ${stories.length} приказни (${words} зборови), ${stories.length + 3} страници → ${OUT}/ за ${Date.now() - t0} ms`,
   )
 }
 

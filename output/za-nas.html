@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="mk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>За нас · Мало Еднорогче</title>
+  <meta name="description" content="Кој стои зад Малото Еднорогче, од каде се приказните и како се додава нова.">
+  <meta name="author" content="Мало Еднорогче">
+  <meta property="og:title" content="За нас · Мало Еднорогче">
+  <meta property="og:description" content="Кој стои зад Малото Еднорогче, од каде се приказните и како се додава нова.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="mk_MK">
+  <meta name="theme-color" content="#fff9f2">
+  <link rel="icon" type="image/png" href="imgs/main_unicorn.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/app.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body data-page="about">
+<tc-theme name="sunshine" variant="rose">
+<tc-cool-nav sticky expand-breakpoint="md" login-label="Случајна приказна" login-variant="primary" scroll-offset="24">
+  <a slot="brand" class="me-brand" href="index.html" aria-label="Мало Еднорогче — почетна">
+    <img src="imgs/main_unicorn.png" alt="" width="40" height="40">
+    <tc-brand primary-text="Мало" secondary-text="Еднорогче"></tc-brand>
+  </a>
+  <tc-button slot="right" variant="secondary" outline size="sm" data-toggle-letters aria-pressed="false" title="Поголеми букви за полесно читање">Аа</tc-button>
+</tc-cool-nav>
+<main id="glavno">
+<tc-rich-page-header
+  icon-name="Sparkles"
+  icon-color="pink"
+  title-text="За Малото Еднорогче"
+  sub="Место каде приказните се читаат на македонски, без брзање и без реклами"
+  description="Страница за деца што сакаат еднорози, бајки и топли приказни пред спиење — и за возрасните што им читаат."
+>
+  <tc-badge slot="chips" size="xs" pill tone="neutral" text="Бесплатно"></tc-badge>
+  <tc-badge slot="chips" size="xs" pill tone="neutral" text="17 приказни"></tc-badge>
+  <tc-button slot="actions" variant="primary" href="index.html#ednorozi">Кон приказните</tc-button>
+</tc-rich-page-header>
+
+<tc-container size="md">
+  <div class="me-prose">
+    <h2>Што има тука?</h2>
+    <p>Две полици со приказни. На првата се <strong>приказните за еднорози</strong> — оригинални, напишани за оваа страница, за храброст, пријателство и малку волшебство. На втората се <strong>бајките</strong> што ги знаат децата од целиот свет: Пепелашка, Црвенкапа, Снежана, Трите прасиња и другите, нежно прераскажани за најмалите, без страшни делови што ќе ги држат будни.</p>
+    <p>Секоја приказна е напишана за околу пет минути читање и завршува со кратка <strong>поука</strong> — една реченица за разговор по читањето.</p>
+
+    <h2>За родителите</h2>
+    <ul>
+      <li><strong>Копчето „Аа“</strong> во горниот десен агол ги зголемува буквите — за деца што учат да читаат сами.</li>
+      <li><strong>Тенката линија</strong> на врвот од секоја приказна покажува колку е прочитано — децата сакаат да ја гледаат како расте.</li>
+      <li><strong>„Случајна приказна“</strong> избира една наслепо, кога никој не може да се одлучи.</li>
+    </ul>
+
+    <h2>Од каде се бајките?</h2>
+    <p>Бајките се народни приказни, запишани пред многу години од Браќата Грим, Шарл Перо и Ханс Кристијан Андерсен. Тие се дел од заедничкото наследство на сите деца, а тука се прераскажани со наши зборови. Приказните за еднорози се оригинални и напишани за Малото Еднорогче.</p>
+
+    <h2>Како се додава нова приказна?</h2>
+    <p>Страницата се гради од обични текстуални датотеки. Една приказна е една датотека во папката <code>content/prikazni/</code>, со наслов, категорија и поука на почетокот и обичен текст по неа. Потоа <code>npm run build</code> — и приказната е на полицата. Деталите се во <code>README.md</code>.</p>
+  </div>
+</tc-container>
+
+<section class="me-section me-section--alt">
+  <tc-container>
+    <tc-section-flag title="Започни од овде" subtitle="Три приказни за прво читање"></tc-section-flag>
+    <tc-grid columns="1" columns-sm="2" columns-lg="3" gap="1.25rem">
+<tc-taxonomy-card
+  accent="#c2417a"
+  eyebrow="Приказни за еднорози"
+  heading="Ѕвездичка и изгубениот сјај"
+  heading-level="3"
+  subheading="Оригинална приказна"
+  description="Малото еднорогче Ѕвездичка едно утро се буди без сјајот на рогот и тргнува да го бара по целата долина."
+  clamp="3"
+  metric-value="5"
+  metric-unit="мин"
+  metric-spoken="5 минути читање"
+  href="prikazni/zvezdichka-i-izgubeniot-sjaj.html"
+>
+  <div slot="media" class="me-card-media" style="--me-accent:#c2417a"><tc-icon name="Sparkles" size="2.4rem" decorative></tc-icon></div>
+</tc-taxonomy-card>
+<tc-taxonomy-card
+  accent="#be185d"
+  eyebrow="Бајки"
+  heading="Пепелашка"
+  heading-level="3"
+  subheading="Шарл Перо · Браќа Грим"
+  description="Доброто девојче што спие покрај огништето, самовилата со тиквата-кочија и кристалното чевличе што му одговара само на една."
+  clamp="3"
+  metric-value="7"
+  metric-unit="мин"
+  metric-spoken="7 минути читање"
+  href="prikazni/pepelashka.html"
+>
+  <div slot="media" class="me-card-media" style="--me-accent:#be185d"><tc-icon name="Crown" size="2.4rem" decorative></tc-icon></div>
+</tc-taxonomy-card>
+<tc-taxonomy-card
+  accent="#7c3aed"
+  eyebrow="Приказни за еднорози"
+  heading="Еднорогот и виножитото"
+  heading-level="3"
+  subheading="Оригинална приказна"
+  description="Знаете ли од каде доаѓа виножитото? Го слика еднорогот Дуга, а една пролет му недостига една боја."
+  clamp="3"
+  metric-value="5"
+  metric-unit="мин"
+  metric-spoken="5 минути читање"
+  href="prikazni/ednorogot-i-vinozhitoto.html"
+>
+  <div slot="media" class="me-card-media" style="--me-accent:#7c3aed"><tc-icon name="Rainbow" size="2.4rem" decorative></tc-icon></div>
+</tc-taxonomy-card>
+</tc-grid>
+  </tc-container>
+</section>
+</main>
+<tc-page-footer
+  brand="Мало Еднорогче"
+  tagline="Приказни за еднорози и бајки за деца, на македонски"
+  description="Бајките се народни приказни, слободно прераскажани за деца. Приказните за еднорози се оригинални и напишани за оваа страница."
+  legal-text="© 2026 Мало Еднорогче · Направено со љубов за малите читатели"
+></tc-page-footer>
+</tc-theme>
+<script type="application/json" id="page-data">{"nav":[{"label":"Почетна","href":"index.html","active":false},{"label":"Еднорози","href":"index.html#ednorozi","active":false},{"label":"Бајки","href":"index.html#bajki","active":false},{"label":"За нас","href":"za-nas.html","active":true}],"stories":["prikazni/zvezdichka-i-izgubeniot-sjaj.html","prikazni/ednorogot-i-vinozhitoto.html","prikazni/luna-i-nokjnoto-nebo.html","prikazni/ednorogcheto-shto-ne-sakashe-da-spie.html","prikazni/tajnata-na-volshebnata-shuma.html","prikazni/oblachko-i-izgubenoto-jagne.html","prikazni/pepelashka.html","prikazni/crvenkapa.html","prikazni/snezhana-i-sedumte-dzhudzhinja.html","prikazni/zaspanata-ubavica.html","prikazni/ivica-i-marica.html","prikazni/trite-prasinja.html","prikazni/zlatokosa-i-trite-mechki.html","prikazni/grdoto-pajche.html","prikazni/paleshka.html","prikazni/princezata-na-zrno-grashok.html","prikazni/hrabriot-krojach.html"],"footer":{"menus":[{"title":"Приказни за еднорози","links":[{"label":"Ѕвездичка и изгубениот сјај","href":"prikazni/zvezdichka-i-izgubeniot-sjaj.html"},{"label":"Еднорогот и виножитото","href":"prikazni/ednorogot-i-vinozhitoto.html"},{"label":"Луна и ноќното небо","href":"prikazni/luna-i-nokjnoto-nebo.html"},{"label":"Еднорогчето што не сакаше да спие","href":"prikazni/ednorogcheto-shto-ne-sakashe-da-spie.html"},{"label":"Тајната на волшебната шума","href":"prikazni/tajnata-na-volshebnata-shuma.html"},{"label":"Облачко и изгубеното јагне","href":"prikazni/oblachko-i-izgubenoto-jagne.html"}]},{"title":"Бајки","links":[{"label":"Пепелашка","href":"prikazni/pepelashka.html"},{"label":"Црвенкапа","href":"prikazni/crvenkapa.html"},{"label":"Снежана и седумте џуџиња","href":"prikazni/snezhana-i-sedumte-dzhudzhinja.html"},{"label":"Заспаната убавица","href":"prikazni/zaspanata-ubavica.html"},{"label":"Ивица и Марица","href":"prikazni/ivica-i-marica.html"},{"label":"Трите прасиња","href":"prikazni/trite-prasinja.html"}]},{"title":"Инфо","links":[{"label":"За нас","href":"za-nas.html"},{"label":"Како да читаме заедно","href":"index.html#zaedno"},{"label":"Сите бајки","href":"index.html#bajki"}]}],"legalLinks":[{"label":"За нас","href":"za-nas.html"},{"label":"Почетна","href":"index.html"}],"socialLinks":[]}}</script>
+</body>
+</html>
